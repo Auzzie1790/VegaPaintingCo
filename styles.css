@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #333;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    --gradient: linear-gradient(135deg, #969a82,  #000000);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: var(--gradient);
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 2s ease-in-out;
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
