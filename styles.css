@@ -1,7 +1,5 @@
 :root {
     --primary-color: #333;
-    --background-color: #f8f9fa;
-    --text-color: pink;
     --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
     --gradient: linear-gradient(135deg, #969a82, #000000);
 }
@@ -15,7 +13,7 @@ body {
 
 h1 {
     font-family: 'Reddit Sans', sans-serif; /* Fallback to sans-serif if Reddit Sans isn't loaded */
-    font-size: 30px;  /* Example size */
+    font-size: 2px;  /* Example size */
     color: white;  /* Adjust color as needed */
     margin-bottom: 20px;
 }
@@ -35,6 +33,37 @@ h1 {
 
 .logo-image:hover {
     transform: scale(0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for smaller devices */
+    }
+
+    .logo-image {
+        max-width: 300px; /* Adjust the max width as needed */
+        height: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .card { 
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px !important; /* Smaller font size for smaller devices */
+    }
+
+    .logo-image {
+        max-width: 150px; /* Adjust the max width as needed */
+        height: auto;
+    }
 }
 
 @keyframes fadeIn {
