@@ -35,6 +35,32 @@ h1 {
     transform: scale(0.9);
 }
 
+/* Header Start */
+
+#header {
+    padding-bottom: 60px;
+}
+
+.navbar {
+    background-color: #000; /* Black background */
+}
+.navbar-brand h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #fff; /* White text color */
+}
+
+/*Footer Start */
+
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .card {
