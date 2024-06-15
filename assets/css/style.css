@@ -667,7 +667,7 @@ input::-ms-input-placeholder {
 }
 /*home section*/
 .home{
-    background: url(../images/logo.jpeg) no-repeat center center;
+    background: url(../images/newHero.JPG) no-repeat center center;
     background-size: cover;
 }
 .home_skew_border{
