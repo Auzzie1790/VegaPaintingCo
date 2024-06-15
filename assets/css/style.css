@@ -552,7 +552,7 @@ input::-ms-input-placeholder {
     z-index: 300;
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    background-color:rgba(34, 61, 97, 0.64);
+    background-color:black;
     -webkit-transition:all .3s;
     -moz-transition:all .3s;
     transition:all .3s;
@@ -667,7 +667,7 @@ input::-ms-input-placeholder {
 }
 /*home section*/
 .home{
-    background: url(../images/Untitled\ design.png) no-repeat center center;
+    background: url(../images/logo.jpeg) no-repeat center center;
     background-size: cover;
 }
 .home_skew_border{
@@ -1156,7 +1156,7 @@ button.btn-md:hover {
 
 /* Team section css */
 .main_team_area{
-    background: url(../images/teambg.jpg) no-repeat scroll top center;
+    background: url(../images/wings.png) no-repeat scroll top center;
     background-size: cover;
     position: relative;
     height: 650px;
