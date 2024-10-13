@@ -561,7 +561,7 @@ input::-ms-input-placeholder {
 }
 .main_menu_bg{
     margin-top: 0px;
-    background-color: transparent;
+    background-color: #000 !important;
 }
 .main_menu_bg .navbar-default {
     background-color: transparent; 
@@ -1450,9 +1450,11 @@ li .single_team_text p{
     color:#969a82;
 }
 
-.copyright_text{
-    text-align: right;
+.copyright_text {
+    margin: 0 auto;
+    text-align: center;
 }
+
 .copyright_text p{
     color:#fff;
     line-height: 25px;

@@ -12,10 +12,15 @@ body {
 }
 
 h1 {
-    font-family: 'Reddit Sans', sans-serif; /* Fallback to sans-serif if Reddit Sans isn't loaded */
-    font-size: 2px;  /* Example size */
-    color: white;  /* Adjust color as needed */
+    font-family: 'Source Sans Pro', sans-serif; /* Use SEO-friendly font */
+    font-size: 2rem; /* Adjusted size for readability and SEO */
+    color: white;
     margin-bottom: 20px;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Open Sans', sans-serif; /* SEO-optimized font */
+    color: #fff;
 }
 
 .card {
@@ -37,13 +42,35 @@ h1 {
 
 /* Header Start */
 
-#header {
+.header {
+    background-color: #000 !important; /* Ensure it stays black */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     padding-bottom: 60px;
+    transition: none; /* Remove any fading effects */
 }
 
+.menu-scrolls {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 300;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-color:black;
+    height: 75px;
+
+}
 .navbar {
     background-color: #000; /* Black background */
+    padding: 10px;
 }
+
 .navbar-brand h1 {
     margin: 0;
     font-size: 1.5rem; /* Adjust font size as needed */
@@ -60,6 +87,10 @@ h1 {
     width: 100%;
 }
 
+.footer img {
+    max-width: 100%; /* Ensure the new footer image fits well */
+    height: auto;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
