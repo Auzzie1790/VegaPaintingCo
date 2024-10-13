@@ -377,12 +377,13 @@
                 event.preventDefault(); // Prevent the form from submitting the usual way
         
                 // Send the form data using EmailJS
-                emailjs.sendForm('service_x18dwti', 'template_yieinnv', this)
+                emailjs.sendForm('service_x18dwti', 'template_gqgh4se', this)
                 .then(function() {
-                    alert('Your message was sent successfully! We will reach out soon!');
-                }, function(error) {
-                    alert('Failed to send your message. No Worky.');
-                });
+    alert('Your message was sent successfully! We will reach out soon!');
+}, function(error) {
+    console.error('Failed to send your message. Error:', error);
+    alert('Failed to send your message. Please try again.');
+});
             });
         </script>
     </body>
