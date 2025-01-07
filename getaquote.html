@@ -26,6 +26,25 @@
   gtag('config', 'AW-16840988307');
 </script>
 
+<!-- Event snippet for Click to call (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16840988307/1LkpCJjcut4bEJOttN4-',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return true;
+  }
+  </script>
+
   <style>
     body{
       background:#f6f6f6;
@@ -255,7 +274,11 @@
         <h1>Remodeling & Painting Experts</h1>
         <p>Kitchen Remodeling & Cabinet Painting<br>Serving Terre Haute & the Wabash Valley</p>
         <p class="hero-sub">Free estimates • Local & insured • Fast turnaround</p>
-        <a href="tel:+18126483345" class="hero-call-btn">CALL NOW: (812) 648-3345</a>
+        <a href="tel:8126483345"
+   onclick="return gtag_report_conversion('tel:8126483345');">
+  (812) 648-3345
+</a>
+
       </div>
 
       <!-- RIGHT: NO FADE -->
