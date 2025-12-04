@@ -17,6 +17,7 @@
         body {
             background: #f6f6f6;
             margin: 0 !important;
+            padding-top: 0 !important; /* REMOVE HEADER GAP */
         }
 
         .landing-hero {
@@ -24,6 +25,7 @@
             padding-bottom: 80px;
             background: url('assets/images/serviceVega.jpg') center/cover no-repeat;
             position: relative;
+            margin-top: 0 !important; /* REMOVE ANY GLOBAL MARGIN */
         }
 
         .landing-hero:before {
@@ -147,34 +149,42 @@
             margin-right: 8px;
         }
 
-        /* Pulse animation */
         @keyframes pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(255,255,255,0.6);
-            }
-            70% {
-                transform: scale(1.04);
-                box-shadow: 0 0 0 10px rgba(255,255,255,0);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(255,255,255,0);
-            }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.6);}
+            70% { transform: scale(1.04); box-shadow: 0 0 0 10px rgba(255,255,255,0);}
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0);}
         }
 
-        /* Mobile tweaks: kill any top gap on small screens */
+        /* MOBILE FIXES */
         @media (max-width: 767px) {
             .landing-hero {
-                padding-top: 0;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
             }
             .hero-inner .row {
                 margin-top: 0 !important;
             }
+
+            /* Center hero text and list on mobile */
+            .hero-title,
+            .hero-title h1,
+            .hero-title p {
+                text-align: center !important;
+            }
+
+            .hero-inner ul {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+                text-align: center !important;
+            }
+
+            .hero-inner ul li {
+                text-align: center !important;
+            }
+
             .mobile-call-bar {
                 display: block;
             }
-            /* Add some bottom padding so content isn't hidden behind call bar */
             .reviews, .benefit-block {
                 padding-bottom: 80px;
             }
@@ -183,11 +193,7 @@
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-        (function(){
-            emailjs.init("XjKNfcQIdqw_c0-Sx");
-        })();
-    </script>
+    <script>(function(){ emailjs.init("XjKNfcQIdqw_c0-Sx"); })();</script>
 
     <!-- Google Ads Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
@@ -242,12 +248,12 @@
 
                         <select class="form-control" name="service_type" required>
                             <option value="">Project Type</option>
-                            <option value="Kitchen Remodeling">Kitchen Remodeling</option>
-                            <option value="Bathroom Remodeling">Bathroom Remodeling</option>
-                            <option value="Residential Painting">Residential Painting</option>
-                            <option value="Commercial Painting">Commercial Painting</option>
-                            <option value="Cabinet Painting">Cabinet Painting</option>
-                            <option value="Custom Decks">Custom Decks</option>
+                            <option>Kitchen Remodeling</option>
+                            <option>Bathroom Remodeling</option>
+                            <option>Residential Painting</option>
+                            <option>Commercial Painting</option>
+                            <option>Cabinet Painting</option>
+                            <option>Custom Decks</option>
                         </select>
                         <br>
 
@@ -380,7 +386,9 @@ document.getElementById("getaquoteForm").addEventListener("submit", function(eve
 
     emailjs.sendForm("service_x18dwti", "template_gqgh4se", this).then(
         function() {
-            gtag("event", "conversion", { send_to: "AW-16840988307/_j_hCNPh_5caEJOttN4-" });
+            gtag("event", "conversion", {
+                send_to: "AW-16840988307/_j_hCNPh_5caEJOttN4-"
+            });
             alert("Your message was sent successfully! We'll reach out soon!");
         },
         function(error) {
