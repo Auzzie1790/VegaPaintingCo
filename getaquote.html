@@ -16,11 +16,11 @@
     <style>
         body {
             background: #f6f6f6;
+            margin: 0 !important;
         }
 
-        /* FIX: Reduce hero top padding (remove header gap) */
         .landing-hero {
-            padding-top: 60px;
+            padding-top: 20px;
             padding-bottom: 80px;
             background: url('assets/images/serviceVega.jpg') center/cover no-repeat;
             position: relative;
@@ -45,6 +45,14 @@
             margin-bottom: 10px;
         }
 
+        /* Match hero paragraph to bullet text */
+        .hero-title p {
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            line-height: 1.5 !important;
+            color: #fff !important;
+        }
+
         .landing-card {
             background: white;
             padding: 35px;
@@ -53,16 +61,15 @@
             margin-top: 30px;
         }
 
-        /* FIX: Form header text should be dark */
         .landing-card h2 {
             color: #222 !important;
         }
 
-        /* FIX: True centered form separator (override theme styles) */
         .landing-card .separator {
-            display: block !important;
-            margin: 10px auto 20px !important;
             float: none !important;
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
         }
 
         .benefit-block {
@@ -78,7 +85,6 @@
             margin-bottom: 30px;
         }
 
-        /* FIX: Equal height review boxes */
         .single_review {
             padding: 20px;
             background: #f8f8f8;
@@ -125,12 +131,12 @@
 <!-- HERO -->
 <section class="landing-hero">
     <div class="container hero-inner">
-        <div class="row" style="align-items:center;">
+        <div class="row" style="align-items:center; margin-top:0 !important;">
 
             <div class="col-md-6 col-sm-12">
                 <div class="hero-title">
                     <h1>Painting & Remodeling Experts!</h1>
-                    <p>Full indoor and outdoor painting plus kitchen and bathroom remodeling. — get your free quote today.</p>
+                    <p>Full indoor and outdoor painting plus kitchen and bathroom remodeling — get your free quote today.</p>
                 </div>
 
                 <ul style="list-style:none; padding-left:0; margin-top:20px;">
@@ -183,13 +189,14 @@
     </div>
 </section>
 
-<!-- SERVICES WITH CABINET PAINTING -->
+<!-- SERVICES -->
 <section class="benefit-block">
     <div class="container text-center">
         <h2>Our Most Popular Services</h2>
         <div class="separator"></div>
 
         <div class="row">
+
             <div class="col-sm-4">
                 <div class="benefit-item">
                     <i class="fa fa-cutlery"></i>
@@ -200,7 +207,7 @@
 
             <div class="col-sm-4">
                 <div class="benefit-item">
-                    <i class="fa fa-bath"></i>
+                    <i class="fa fa-shower"></i> <!-- FIXED ICON -->
                     <h4>Bathroom Remodeling</h4>
                     <p>Beautiful upgrades from flooring to tile to fixtures.</p>
                 </div>
@@ -213,9 +220,11 @@
                     <p>Clean lines, durable finishes, expert prep work.</p>
                 </div>
             </div>
+
         </div>
 
         <div class="row" style="margin-top:30px;">
+
             <div class="col-sm-4">
                 <div class="benefit-item">
                     <i class="fa fa-tint"></i>
@@ -239,6 +248,7 @@
                     <p>Beautiful, durable deck builds tailored to your home.</p>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
