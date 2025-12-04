@@ -120,6 +120,13 @@
             font-size: 18px;
         }
 
+        /* Ensure hero call button is centered */
+        .hero-call-btn {
+            display: block;
+            margin: 25px auto 0;
+            text-align: center;
+        }
+
         /* Mobile-only sticky call bar */
         .mobile-call-bar {
             position: fixed;
@@ -158,8 +165,11 @@
         /* MOBILE FIXES */
         @media (max-width: 767px) {
             .landing-hero {
-                padding-top: 0 !important;
+                padding-top: 0 !important;   /* tighter to top on mobile */
                 margin-top: 0 !important;
+            }
+            .hero-inner {
+                padding-top: 4px !important; /* tiny breathing room */
             }
             .hero-inner .row {
                 margin-top: 0 !important;
@@ -215,7 +225,7 @@
 
             <div class="col-md-6 col-sm-12">
                 <div class="hero-title">
-                    <h1>Painting & Remodeling Experts!</h1>
+                    <h1>Terre Haute Painting & Remodeling Experts</h1>
                     <p>Full indoor and outdoor painting plus kitchen and bathroom remodeling — get your free quote today.</p>
                 </div>
 
@@ -227,8 +237,9 @@
                     <li><i class="fa fa-check"></i> Fast estimates & fair pricing</li>
                 </ul>
 
-                <a href="tel:+18126483345" class="btn btn-lg"
-                   style="margin-top:25px; background:#fff; color:#000; font-weight:800; border:2px solid #fff; padding:14px 26px; letter-spacing:0.5px;">
+                <a href="tel:+18126483345"
+                   class="btn btn-lg hero-call-btn"
+                   style="background:#fff; color:#000; font-weight:800; border:2px solid #fff; padding:14px 26px; letter-spacing:0.5px;">
                    CALL NOW: (812) 648-3345
                 </a>
             </div>
