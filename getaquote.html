@@ -83,6 +83,12 @@
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
             text-align: center;
             margin-bottom: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.18);
         }
 
         .single_review {
@@ -94,6 +100,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .single_review:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
         }
 
         .btn-primary-custom {
@@ -104,6 +116,68 @@
             width: 100%;
             border: none;
             font-size: 18px;
+        }
+
+        /* Mobile-only sticky call bar */
+        .mobile-call-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #1d1d1d;
+            padding: 10px 16px;
+            text-align: center;
+            z-index: 9999;
+            display: none;
+        }
+
+        .mobile-call-bar a {
+            color: #fff;
+            font-weight: 800;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 2px solid #fff;
+            letter-spacing: 0.5px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .mobile-call-bar i {
+            margin-right: 8px;
+        }
+
+        /* Pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255,255,255,0.6);
+            }
+            70% {
+                transform: scale(1.04);
+                box-shadow: 0 0 0 10px rgba(255,255,255,0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255,255,255,0);
+            }
+        }
+
+        /* Mobile tweaks: kill any top gap on small screens */
+        @media (max-width: 767px) {
+            .landing-hero {
+                padding-top: 0;
+            }
+            .hero-inner .row {
+                margin-top: 0 !important;
+            }
+            .mobile-call-bar {
+                display: block;
+            }
+            /* Add some bottom padding so content isn't hidden behind call bar */
+            .reviews, .benefit-block {
+                padding-bottom: 80px;
+            }
         }
     </style>
 
@@ -148,10 +222,9 @@
                 </ul>
 
                 <a href="tel:+18126483345" class="btn btn-lg"
-   style="margin-top:25px; background:#fff; color:#000; font-weight:800; border:2px solid #fff; padding:14px 26px; letter-spacing:0.5px;">
-   CALL NOW: (812) 648-3345
-</a>
-
+                   style="margin-top:25px; background:#fff; color:#000; font-weight:800; border:2px solid #fff; padding:14px 26px; letter-spacing:0.5px;">
+                   CALL NOW: (812) 648-3345
+                </a>
             </div>
 
             <div class="col-md-5 col-md-offset-1 col-sm-12">
@@ -181,7 +254,7 @@
                         <textarea class="form-control" name="message" rows="4" placeholder="Tell us about your project"></textarea>
                         <br>
 
-                        <button type="submit" class="btn-primary-custom">Submit</button>
+                        <button type="submit" class="btn-primary-custom">Submit Quote Request</button>
                     </form>
                 </div>
             </div>
@@ -208,7 +281,6 @@
 
             <div class="col-sm-4">
                 <div class="benefit-item">
-                    <!-- use fa-tint here because it exists in FA 4.x -->
                     <i class="fa fa-tint"></i>
                     <h4>Bathroom Remodeling</h4>
                     <p>Beautiful upgrades from flooring to tile to fixtures.</p>
@@ -229,7 +301,6 @@
 
             <div class="col-sm-4">
                 <div class="benefit-item">
-                    <!-- change cabinet to a different existing icon -->
                     <i class="fa fa-archive"></i>
                     <h4>Cabinet Painting</h4>
                     <p>High-end refinishing that updates your space instantly.</p>
@@ -295,6 +366,13 @@
         <p>Made with <i class="fa fa-heart"></i> by Digital Heroes 2024.</p>
     </div>
 </section>
+
+<!-- MOBILE-ONLY STICKY CALL BAR -->
+<div class="mobile-call-bar">
+    <a href="tel:+18126483345">
+        <i class="fa fa-phone"></i> CALL NOW: (812) 648-3345
+    </a>
+</div>
 
 <script>
 document.getElementById("getaquoteForm").addEventListener("submit", function(event) {
