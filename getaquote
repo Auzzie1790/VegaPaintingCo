@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Free Painting & Remodeling Quote | Vega Developments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get a fast and free quote for painting or remodeling in Terre Haute. Vega Developments delivers professional, high-quality results for homes and businesses.">
+
+    <!-- Simple clean styles for fast load -->
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background:#f7f7f7; }
+        .hero { padding: 60px 20px; background: #1d1d1d; color:#fff; text-align:center; }
+        .hero h1 { font-size: 32px; margin-bottom: 10px; }
+        .hero p { font-size: 18px; opacity: .9; }
+        .hero .cta { margin-top: 20px; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+
+        .benefits, .services, .testimonials { background:#fff; margin:20px 0; padding:30px; border-radius:8px; }
+        .benefits h2, .services h2, .testimonials h2 { text-align:center; margin-bottom:20px; }
+
+        .benefit-items, .service-items, .review-items { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+        .item { background:#fafafa; padding:20px; border-radius:6px; width:260px; text-align:center; }
+
+        /* Form */
+        .form-section { background:#fff; padding:30px; border-radius:8px; margin-top:20px; }
+        form input, form textarea { width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:5px; }
+        form button { width:100%; padding:14px; background:#1d1d1d; color:#fff; border:none; border-radius:5px; font-size:18px; cursor:pointer; }
+        form button:hover { background:#333; }
+
+        .phone { font-size:20px; margin-top:10px; }
+        .phone a { color:#00c4ff; text-decoration:none; }
+    </style>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("XjKNfcQIdqw_c0-Sx");
+        })();
+    </script>
+
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-16840988307');
+    </script>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Get a Free Painting or Remodeling Quote</h1>
+    <p>Fast, reliable service for the Terre Haute area.</p>
+    <div class="phone">Call Now: <a href="tel:+18126483345">(812) 648-3345</a></div>
+</section>
+
+<div class="container">
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+        <h2>Why Choose Vega Developments?</h2>
+        <div class="benefit-items">
+            <div class="item">
+                <h3>Professional Quality</h3>
+                <p>High-end finishes and reliable craftsmanship on every job.</p>
+            </div>
+            <div class="item">
+                <h3>Fast, Free Estimates</h3>
+                <p>No obligation. Quick turnaround and fair pricing.</p>
+            </div>
+            <div class="item">
+                <h3>Local & Trusted</h3>
+                <p>Serving Terre Haute homeowners and businesses with pride.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-items">
+            <div class="item"><h4>Residential Painting</h4></div>
+            <div class="item"><h4>Commercial Painting</h4></div>
+            <div class="item"><h4>Kitchen Remodeling</h4></div>
+            <div class="item"><h4>Bathroom Remodeling</h4></div>
+            <div class="item"><h4>Custom Decks</h4></div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h2>What Customers Say</h2>
+        <div class="review-items">
+            <div class="item">
+                <p>"Very pleased with the quality of work and fair price."</p>
+                <strong>- Dianne B.</strong>
+            </div>
+            <div class="item">
+                <p>"Responsive, great follow-up, and impressive results."</p>
+                <strong>- Dennis H.</strong>
+            </div>
+            <div class="item">
+                <p>"Professional, reliable, and excellent service!"</p>
+                <strong>- Sunni S.</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="form-section">
+        <h2>Request Your Free Quote</h2>
+        <form id="landingForm">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="tel" name="phone" placeholder="Phone Number" required />
+            <textarea name="message" rows="4" placeholder="Tell us about your project"></textarea>
+            <button type="submit">Get My Free Quote</button>
+        </form>
+    </section>
+</div>
+
+<script>
+document.getElementById('landingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_x18dwti', 'template_gqgh4se', this).then(
+        function() {
+            gtag('event', 'conversion', { 'send_to': 'AW-16840988307/_j_hCNPh_5caEJOttN4-' });
+            alert('Your message was sent! We’ll reach out soon.');
+        },
+        function(error) {
+            alert('Error sending message. Try again.');
+            console.log(error);
+        }
+    );
+});
+</script>
+
+</body>
+</html>
