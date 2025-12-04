@@ -2,30 +2,126 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Get a Free Quote | Vega Developments</title>
-    <meta name="description" content="Get a fast, no-obligation quote for painting or remodeling in the Terre Haute area. Vega Developments delivers professional, high-quality results for homes and businesses.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="description" content="Get a fast, professional quote for painting or remodeling services in Terre Haute from Vega Developments.">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
-
-    <!-- Existing site styles (same as main page) -->
-    <link rel="stylesheet" href="assets/css/iconfont.css">
-    <link rel="stylesheet" href="assets/css/slick/slick.css">
-    <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Site Styles (keeps same look as homepage) -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/plugins.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+        /* Landing Page Custom Cleanup */
+        body {
+            background: #f6f6f6;
+        }
+
+        .landing-hero {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background: url('assets/images/serviceVega.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .landing-hero:before {
+            content: "";
+            background: rgba(0,0,0,0.65);
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .hero-title {
+            margin-bottom: 20px;
+        }
+
+        .hero-title h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-title p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .landing-card {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.25);
+            margin-top: 30px;
+        }
+
+        .landing-card h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .separator {
+            height: 2px;
+            width: 60px;
+            background: #333;
+            margin: 10px auto 20px;
+        }
+
+        /* Benefits */
+        .benefit-block {
+            padding: 50px 0;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .benefit-item i {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        /* Reviews */
+        .reviews {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .single_review {
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .btn-primary-custom {
+            background: #1d1d1d;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 6px;
+            width: 100%;
+            border: none;
+            font-size: 18px;
+        }
+
+        .btn-primary-custom:hover {
+            background: #333;
+        }
+
+    </style>
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -35,297 +131,159 @@
         })();
     </script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Ads tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-16840988307');
+        gtag("js", new Date());
+        gtag("config", "AW-16840988307");
     </script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar-collapse">
-    <div class="culmn">
+<body>
 
-        <!-- Header (same style, simplified links) -->
-        <header id="main_menu" class="header navbar-fixed-top menu-scrolls">
-            <div class="main_menu_bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="nave_menu">
-                            <nav class="navbar navbar-default">
-                                <div class="container-fluid">
-                                    <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                            <span class="sr-only">Toggle navigation</span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>
-                                        <a class="navbar-brand" href="/">
-                                            <img src="assets/images/logoV.jpeg" alt="Vega Developments logo" />
-                                        </a>
-                                    </div>
+<!-- HERO with centered layout -->
+<section class="landing-hero">
+    <div class="container hero-inner">
+        <div class="row" style="align-items:center;">
+            <div class="col-md-6 col-sm-12">
+                <div class="hero-title">
+                    <h1>Get Your Free Quote</h1>
+                    <p>Fast, professional painting and remodeling services in Terre Haute.</p>
+                </div>
 
-                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                        <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="/#home">HOME</a></li>
-                                            <li><a href="/#service">SERVICES</a></li>
-                                            <li><a href="/#history">ABOUT US</a></li>
-                                            <li><a href="/#contact">CONTACT</a></li>
-                                            <li>
-                                                <a href="tel:+18126483345" style="font-weight:600;">
-                                                    <i class="fa fa-phone"></i> (812) 648-3345
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
+                <ul style="list-style:none; padding-left:0; margin-top:20px;">
+                    <li><i class="fa fa-check"></i> Local, trusted team</li>
+                    <li><i class="fa fa-check"></i> High-quality craftsmanship</li>
+                    <li><i class="fa fa-check"></i> Fair pricing & quick turnaround</li>
+                </ul>
+
+                <a href="tel:+18126483345" class="btn btn-lg" style="margin-top:25px; background:#fff; color:#000; font-weight:600;">
+                    Call Now: (812) 648-3345
+                </a>
+            </div>
+
+            <!-- FORM -->
+            <div class="col-md-5 col-md-offset-1 col-sm-12">
+                <div class="landing-card">
+                    <h2>Request a Free Quote</h2>
+                    <div class="separator"></div>
+
+                    <form id="getaquoteForm">
+                        <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                        <br>
+                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        <br>
+                        <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
+                        <br>
+                        <select class="form-control" name="service_type" required>
+                            <option value="">Project Type</option>
+                            <option value="Residential Painting">Residential Painting</option>
+                            <option value="Commercial Painting">Commercial Painting</option>
+                            <option value="Kitchen Remodeling">Kitchen Remodeling</option>
+                            <option value="Bathroom Remodeling">Bathroom Remodeling</option>
+                            <option value="Custom Decks">Custom Decks</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <br>
+                        <textarea class="form-control" name="message" rows="4" placeholder="Tell us about your project"></textarea>
+                        <br>
+                        <button type="submit" class="btn-primary-custom">Submit Quote Request</button>
+                    </form>
                 </div>
             </div>
-        </header>
-
-        <!-- HERO + FORM (TOP OF PAGE) -->
-        <section id="getaquote" class="home">
-            <div class="overlay">
-                <div class="home_skew_border">
-                    <div class="container">
-                        <div class="row" style="padding-top:120px; padding-bottom:80px;">
-                            <!-- Left: Pitch -->
-                            <div class="col-md-6 col-sm-12">
-                                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                    <h3>Free Painting & Remodeling Quotes in Terre Haute</h3>
-                                    <h1>Vega Developments</h1>
-                                    <div class="separator"></div>
-                                    <p>
-                                        Tell us a bit about your project and we’ll follow up quickly with a
-                                        free, no-obligation quote. Whether you need interior painting, exterior
-                                        painting, or a full remodel, our team delivers professional results you’ll love.
-                                    </p>
-                                    <ul style="list-style:none; padding-left:0; margin-top:20px;">
-                                        <li><i class="fa fa-check"></i> Fast, local response</li>
-                                        <li><i class="fa fa-check"></i> High-quality workmanship</li>
-                                        <li><i class="fa fa-check"></i> Residential & commercial projects</li>
-                                    </ul>
-                                    <div class="home_btn m_t_20">
-                                        <a href="tel:+18126483345" class="btn btn-lg m_t_10">
-                                            CALL NOW: (812) 648-3345
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right: Form in card-style box -->
-                            <div class="col-md-5 col-md-offset-1 col-sm-12">
-                                <div class="single_contant_left padding-top-30 padding-bottom-30" style="background:#ffffff; border-radius:8px; box-shadow:0 3px 15px rgba(0,0,0,0.25);">
-                                    <div class="head_title text-center">
-                                        <h2 style="margin-top:0;">Get Your Free Quote</h2>
-                                        <div class="separator"></div>
-                                        <p>Fill out this short form and we’ll reach out soon.</p>
-                                    </div>
-                                    <form id="getaquoteForm">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control" name="service_type" required>
-                                                <option value="">What are you interested in?</option>
-                                                <option value="Residential Painting">Residential Painting</option>
-                                                <option value="Commercial Painting">Commercial Painting</option>
-                                                <option value="Kitchen Remodeling">Kitchen Remodeling</option>
-                                                <option value="Bathroom Remodeling">Bathroom Remodeling</option>
-                                                <option value="Custom Decks">Custom Decks</option>
-                                                <option value="Other">Other / Not Sure</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <textarea class="form-control" name="message" rows="4" placeholder="Tell us about your project (optional)"></textarea>
-                                        </div>
-                                        <div class="text-center">
-                                            <input type="submit" value="REQUEST MY FREE QUOTE" class="btn btn-lg">
-                                        </div>
-                                    </form>
-                                    <p class="text-center" style="margin-top:15px; font-size:12px; color:#666;">
-                                        No spam. No obligation.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BENEFITS / TRUST SECTION -->
-        <section class="feature sections" style="padding-top:60px; padding-bottom:40px;">
-            <div class="container">
-                <div class="row">
-                    <div class="main_feature text-center">
-                        <div class="head_title">
-                            <h2>Why Homeowners Choose Vega Developments</h2>
-                            <div class="separator"></div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="single_feature">
-                                <div class="single_feature_icon">
-                                    <i class="fa fa-clone"></i>
-                                </div>
-                                <h4>Quality Workmanship</h4>
-                                <div class="separator3"></div>
-                                <p>Clean lines, careful prep, and professional finishes on every job.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="single_feature">
-                                <div class="single_feature_icon">
-                                    <i class="fa fa-lightbulb-o"></i>
-                                </div>
-                                <h4>Custom Solutions</h4>
-                                <div class="separator3"></div>
-                                <p>From color choices to layout changes, we tailor every project to you.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="single_feature">
-                                <div class="single_feature_icon">
-                                    <i class="fa fa-comments-o"></i>
-                                </div>
-                                <h4>Reliable & Local</h4>
-                                <div class="separator3"></div>
-                                <p>Friendly service, clear communication, and a team based in Terre Haute.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- REVIEWS (reuse from main page, tighter) -->
-        <section id="reviews" class="reviews sections">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <div class="head_title">
-                            <h2>What Our Clients Say</h2>
-                            <div class="separator"></div>
-                            <p>Real feedback from homeowners and businesses we’ve worked with.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row review-container">
-                    <div class="col-md-4">
-                        <div class="single_review">
-                            <div class="review_text">
-                                <p>"Very pleased with the quality of work, fair price, and so easy to work with. I really appreciate a trustworthy business and will definitely be using Vega Developments again."</p>
-                            </div>
-                            <div class="review_author">
-                                <h4>- Dianne B.</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="single_review">
-                            <div class="review_text">
-                                <p>"Very responsive, good follow-up and quality work in a timely manner. Would highly recommend."</p>
-                            </div>
-                            <div class="review_author">
-                                <h4>- Dennis H.</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="single_review">
-                            <div class="review_text">
-                                <p>"If you are looking for professional quality services - use Vega Developments - Amazing is all I can say."</p>
-                            </div>
-                            <div class="review_author">
-                                <h4>- Sunni S.</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <section class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="main_footer">
-                            <div class="row">
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class="copyright_text">
-                                        <p class="wow fadeInRight" data-wow-duration="1s">
-                                            Made with <i class="fa fa-heart"></i> by Digital Heroes 2024. All Rights Reserved
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-xs-12 text-right">
-                                    <a href="tel:+18126483345" class="btn btn-sm" style="margin-top:10px;">
-                                        Call Now: (812) 648-3345
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        </div>
     </div>
+</section>
 
-    <!-- Scroll to top -->
-    <div class="scrollup">
-        <a href="#"><i class="fa fa-chevron-up"></i></a>
+<!-- BENEFITS -->
+<section class="benefit-block">
+    <div class="container text-center">
+        <h2>Why Homeowners Choose Us</h2>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="benefit-item">
+                    <i class="fa fa-paint-brush"></i>
+                    <h4>Professional Quality</h4>
+                    <p>Clean lines, durable finishes, and expert detail on every job.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="benefit-item">
+                    <i class="fa fa-clock-o"></i>
+                    <h4>Fast Estimates</h4>
+                    <p>Quick turnaround with no obligation and transparent pricing.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="benefit-item">
+                    <i class="fa fa-home"></i>
+                    <h4>Local & Trusted</h4>
+                    <p>Serving Terre Haute homeowners and businesses with pride.</p>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <!-- JS (same as main page) -->
-    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.js"></script>
-    <script src="assets/js/jquery.mixitup.min.js"></script>
-    <script src="assets/js/jquery.easing.1.3.js"></script>
-    <script src="assets/js/jquery.masonry.min.js"></script>
-    <script src="assets/css/slick/slick.js"></script>
-    <script src="assets/css/slick/slick.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
+<!-- REVIEWS -->
+<section class="reviews">
+    <div class="container text-center">
+        <h2>What Our Clients Say</h2>
+        <div class="separator"></div>
 
-    <!-- Form handling + conversion -->
-    <script>
-        document.getElementById('getaquoteForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single_review">
+                    <p>"Very pleased with the quality of work, fair price, and so easy to work with."</p>
+                    <h4>- Dianne B.</h4>
+                </div>
+            </div>
 
-            emailjs.sendForm('service_x18dwti', 'template_gqgh4se', this).then(
-                function() {
-                    // Fire Google Ads conversion
-                    gtag('event', 'conversion', { 'send_to': 'AW-16840988307/_j_hCNPh_5caEJOttN4-' });
-                    alert('Your message was sent successfully! We will reach out soon!');
-                },
-                function(error) {
-                    console.error('Failed to send your message. Error:', error);
-                    alert('Failed to send your message. Please try again.');
-                }
-            );
-        });
-    </script>
+            <div class="col-md-4">
+                <div class="single_review">
+                    <p>"Very responsive, great follow-up and quality work in a timely manner."</p>
+                    <h4>- Dennis H.</h4>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="single_review">
+                    <p>"Amazing quality and very professional. Highly recommended!"</p>
+                    <h4>- Sunni S.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+    <div class="container text-center">
+        <p>Made with <i class="fa fa-heart"></i> by Digital Heroes 2024.</p>
+    </div>
+</section>
+
+<script>
+document.getElementById("getaquoteForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_x18dwti", "template_gqgh4se", this).then(
+        function() {
+            gtag("event", "conversion", { send_to: "AW-16840988307/_j_hCNPh_5caEJOttN4-" });
+            alert("Your message was sent successfully! We'll reach out soon!");
+        },
+        function(error) {
+            alert("Failed to send your message. Please try again.");
+        }
+    );
+});
+</script>
+
 </body>
 </html>
