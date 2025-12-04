@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Get a Free Quote | Vega Developments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="Get a fast, professional quote for painting or remodeling services in Terre Haute from Vega Developments.">
 
     <!-- Site Styles -->
@@ -17,8 +18,9 @@
             background: #f6f6f6;
         }
 
+        /* FIX: Reduce hero top padding (remove header gap) */
         .landing-hero {
-            padding-top: 120px;
+            padding-top: 60px;
             padding-bottom: 80px;
             background: url('assets/images/serviceVega.jpg') center/cover no-repeat;
             position: relative;
@@ -37,19 +39,10 @@
             color: white;
         }
 
-        .hero-title {
-            margin-bottom: 20px;
-        }
-
         .hero-title h1 {
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 10px;
-        }
-
-        .hero-title p {
-            font-size: 18px;
-            opacity: 0.9;
         }
 
         .landing-card {
@@ -60,22 +53,16 @@
             margin-top: 30px;
         }
 
-        /* FIX: Make form header text dark */
+        /* FIX: Form header text should be dark */
         .landing-card h2 {
             color: #222 !important;
         }
 
-        .separator {
-            height: 2px;
-            width: 60px;
-            background: #333;
-            margin: 10px auto 20px;
-        }
-
-        /* FIX: Center form separator */
+        /* FIX: True centered form separator (override theme styles) */
         .landing-card .separator {
-            margin-left: auto;
-            margin-right: auto;
+            display: block !important;
+            margin: 10px auto 20px !important;
+            float: none !important;
         }
 
         .benefit-block {
@@ -91,23 +78,12 @@
             margin-bottom: 30px;
         }
 
-        .benefit-item i {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .reviews {
-            padding: 60px 0;
-            background: white;
-        }
-
+        /* FIX: Equal height review boxes */
         .single_review {
             padding: 20px;
             background: #f8f8f8;
             border-radius: 8px;
             margin-bottom: 20px;
-
-            /* FIX: equal-height review boxes */
             min-height: 200px;
             display: flex;
             flex-direction: column;
@@ -122,10 +98,6 @@
             width: 100%;
             border: none;
             font-size: 18px;
-        }
-
-        .btn-primary-custom:hover {
-            background: #333;
         }
     </style>
 
@@ -154,28 +126,26 @@
 <section class="landing-hero">
     <div class="container hero-inner">
         <div class="row" style="align-items:center;">
-            
-            <!-- LEFT CONTENT -->
+
             <div class="col-md-6 col-sm-12">
                 <div class="hero-title">
-                    <h1>Get Your Free Quote</h1>
-                    <p>Fast, professional painting and remodeling services in Terre Haute.</p>
+                    <h1>Painting & Remodeling Experts</h1>
+                    <p>From kitchens to full interior painting — get your free quote today.</p>
                 </div>
 
                 <ul style="list-style:none; padding-left:0; margin-top:20px;">
-                    <li><i class="fa fa-check"></i> Local, trusted team</li>
-                    <li><i class="fa fa-check"></i> High-quality craftsmanship</li>
-                    <li><i class="fa fa-check"></i> Fair pricing & quick turnaround</li>
+                    <li><i class="fa fa-check"></i> Kitchen & bathroom remodeling</li>
+                    <li><i class="fa fa-check"></i> Interior & exterior painting</li>
+                    <li><i class="fa fa-check"></i> Cabinet painting & refinishing</li>
+                    <li><i class="fa fa-check"></i> Fast estimates & fair pricing</li>
                 </ul>
 
-                <a href="tel:+18126483345" 
-                   class="btn btn-lg" 
+                <a href="tel:+18126483345" class="btn btn-lg"
                    style="margin-top:25px; background:#fff; color:#000; font-weight:600;">
                    Call Now: (812) 648-3345
                 </a>
             </div>
 
-            <!-- FORM -->
             <div class="col-md-5 col-md-offset-1 col-sm-12">
                 <div class="landing-card">
                     <h2>Request a Free Quote</h2>
@@ -191,12 +161,12 @@
 
                         <select class="form-control" name="service_type" required>
                             <option value="">Project Type</option>
-                            <option value="Residential Painting">Residential Painting</option>
-                            <option value="Commercial Painting">Commercial Painting</option>
                             <option value="Kitchen Remodeling">Kitchen Remodeling</option>
                             <option value="Bathroom Remodeling">Bathroom Remodeling</option>
+                            <option value="Residential Painting">Residential Painting</option>
+                            <option value="Commercial Painting">Commercial Painting</option>
+                            <option value="Cabinet Painting">Cabinet Painting</option>
                             <option value="Custom Decks">Custom Decks</option>
-                            <option value="Other">Other</option>
                         </select>
                         <br>
 
@@ -205,41 +175,67 @@
 
                         <button type="submit" class="btn-primary-custom">Submit Quote Request</button>
                     </form>
-
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- BENEFITS -->
+<!-- SERVICES WITH CABINET PAINTING -->
 <section class="benefit-block">
     <div class="container text-center">
-        <h2>Why Homeowners Choose Us</h2>
+        <h2>Our Most Popular Services</h2>
         <div class="separator"></div>
 
         <div class="row">
             <div class="col-sm-4">
                 <div class="benefit-item">
+                    <i class="fa fa-cutlery"></i>
+                    <h4>Kitchen Remodeling</h4>
+                    <p>Modern layouts, new cabinetry, and complete transformations.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="benefit-item">
+                    <i class="fa fa-bath"></i>
+                    <h4>Bathroom Remodeling</h4>
+                    <p>Beautiful upgrades from flooring to tile to fixtures.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="benefit-item">
                     <i class="fa fa-paint-brush"></i>
-                    <h4>Professional Quality</h4>
-                    <p>Clean lines, durable finishes, and expert detail on every job.</p>
+                    <h4>Interior & Exterior Painting</h4>
+                    <p>Clean lines, durable finishes, expert prep work.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:30px;">
+            <div class="col-sm-4">
+                <div class="benefit-item">
+                    <i class="fa fa-tint"></i>
+                    <h4>Cabinet Painting</h4>
+                    <p>High-end refinishing that updates your space instantly.</p>
                 </div>
             </div>
 
             <div class="col-sm-4">
                 <div class="benefit-item">
-                    <i class="fa fa-clock-o"></i>
-                    <h4>Fast Estimates</h4>
-                    <p>Quick turnaround with no obligation and transparent pricing.</p>
+                    <i class="fa fa-building"></i>
+                    <h4>Commercial Painting</h4>
+                    <p>Professional results that impress customers & clients.</p>
                 </div>
             </div>
 
             <div class="col-sm-4">
                 <div class="benefit-item">
-                    <i class="fa fa-home"></i>
-                    <h4>Local & Trusted</h4>
-                    <p>Serving Terre Haute homeowners and businesses with pride.</p>
+                    <i class="fa fa-tree"></i>
+                    <h4>Custom Decks</h4>
+                    <p>Beautiful, durable deck builds tailored to your home.</p>
                 </div>
             </div>
         </div>
