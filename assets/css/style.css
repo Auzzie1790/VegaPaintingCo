@@ -387,11 +387,91 @@ html, body {
       padding-right: 20px !important;
     }
   
-    /* Hide the Services image on mobile */
+    /* Hide the history image on mobile */
     #service .single_history_img,
     #service .single_service_img,
     #service img[src*="serviceVega"] {
       display: none !important;
+    }
+  }
+  /* =========================
+   MOBILE CENTER FIXES
+   ========================= */
+@media (max-width: 767px) {
+
+    /* 1) True center for headings that use left-border styling */
+    .main_history .single_history_content .head_title h2 {
+      border-left: 0 !important;
+      padding-left: 0 !important;
+      text-align: center !important;
+    }
+  
+    /* If any services heading styling is still applied */
+    .main_service .head_title h2 {
+      border-right: 0 !important;
+      padding-right: 0 !important;
+      margin-right: 0 !important;
+      text-align: center !important;
+    }
+  
+    /* Center the heading wrapper itself */
+    .head_title {
+      text-align: center !important;
+      margin-bottom: 35px !important;
+    }
+  
+    /* 2) Center the scroll-down button */
+    .scrooldown {
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+  
+    /* 3) Contact: force Bootstrap stacking (override your inline flex) */
+    #contact .row {
+      display: block !important;
+      align-items: initial !important;
+    }
+    #contact [class*="col-"] {
+      display: block !important;
+      width: 100% !important;
+      float: none !important;
+    }
+  
+    /* Remove offsets that push the form/card off-center */
+    #contact .col-lg-offset-2,
+    #contact .col-md-offset-2,
+    #contact .col-sm-offset-1,
+    #contact .col-xs-offset-1 {
+      margin-left: 0 !important;
+    }
+  
+    /* Make the inner form wrapper full width */
+    #contact .col-lg-8,
+    #contact .col-md-8,
+    #contact .col-sm-10 {
+      width: 100% !important;
+    }
+  
+    /* Center text + tighten padding so boxes look centered */
+    #contact .contact_info_content,
+    #contact .single_contant_left {
+      text-align: center !important;
+    }
+    #contact .p_l_r {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  
+    /* Services: hide the services photo on mobile */
+    #service .single_history_img,
+    #service .single_service_img,
+    #service img[src*="serviceVega"] {
+      display: none !important;
+    }
+  
+    /* General: ensure centered text on mobile sections */
+    #history, #service, #feature, #reviews, #contact {
+      text-align: center !important;
     }
   }
   
