@@ -503,5 +503,117 @@ html, body {
   font-size: 1.125rem;
   margin-bottom: 30px;
 }
+/* =========================
+   MOBILE LANDING PAGE FIXES
+   ========================= */
+   @media (max-width: 767px) {
 
+    body {
+      padding-bottom: 90px; /* room for sticky call bar */
+    }
+  
+    /* HERO */
+    .landing-hero {
+      padding: 40px 15px 60px;
+    }
+  
+    .hero-inner .row {
+      display: block;
+    }
+  
+    .hero-title,
+    .hero-title h1,
+    .hero-title p {
+      text-align: center;
+    }
+  
+    .hero-title h1 {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+  
+    .hero-title p {
+      font-size: 15px;
+    }
+  
+    /* BULLET LIST */
+    .landing-hero ul {
+      padding-left: 0;
+      margin: 20px 0;
+      text-align: center;
+    }
+  
+    .landing-hero ul li {
+      list-style: none;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+  
+    /* CALL BUTTON */
+    .hero-call-btn {
+      width: 100%;
+      max-width: 320px;
+    }
+  
+    /* FORM CARD */
+    .landing-card {
+      margin-top: 30px;
+      padding: 25px 20px;
+    }
+  
+    .landing-card h2 {
+      text-align: center;
+    }
+  
+    .landing-card .separator {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .landing-card .form-control,
+    .landing-card select,
+    .landing-card textarea {
+      font-size: 16px; /* prevents iOS zoom */
+    }
+  
+    /* SERVICES */
+    .benefit-block {
+      padding: 50px 15px;
+    }
+  
+    .benefit-item {
+      margin-bottom: 20px;
+    }
+  
+    .benefit-item h4,
+    .benefit-item p {
+      text-align: center;
+    }
+  
+    /* REVIEWS */
+    .reviews {
+      padding: 50px 15px;
+    }
+  
+    .single_review {
+      min-height: auto;
+    }
+  
+    .single_review p,
+    .single_review h4 {
+      text-align: center;
+    }
+  
+    /* FOOTER */
+    .footer p {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  
+    /* STICKY CALL BAR */
+    .mobile-call-bar {
+      display: block;
+    }
+  }
+  
   
