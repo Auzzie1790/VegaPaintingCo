@@ -184,20 +184,24 @@ gtag("config", "AW-16840988307");
 
           <!-- NETLIFY FORM -->
           <form
-            name="Google_lead"
+            name="Google"
             method="POST"
             action="/thankyou.html"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="quote_landing">
+            <!-- REQUIRED -->
+            <input type="hidden" name="form-name" value="Google">
 
+            <!-- HONEYPOT -->
             <p style="display:none;">
               <label>Don’t fill this out: <input name="bot-field"></label>
             </p>
 
             <input type="text" class="form-control" name="name" placeholder="Full Name" required><br>
+
             <input type="email" class="form-control" name="email" placeholder="Email" required><br>
+
             <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required><br>
 
             <select class="form-control" name="service_type" required>
@@ -212,7 +216,9 @@ gtag("config", "AW-16840988307");
 
             <textarea class="form-control" name="message" rows="4" placeholder="Tell us about your project" required></textarea><br>
 
-            <button type="submit" class="btn-primary-custom">Submit Quote Request</button>
+            <button type="submit" class="btn-primary-custom">
+              Submit Quote Request
+            </button>
           </form>
 
         </div>
@@ -227,7 +233,6 @@ gtag("config", "AW-16840988307");
   <div class="container text-center">
     <h2>Our Most Popular Services</h2>
     <div class="separator"></div>
-    <!-- content unchanged -->
   </div>
 </section>
 
@@ -236,7 +241,6 @@ gtag("config", "AW-16840988307");
   <div class="container text-center">
     <h2>What Our Clients Say</h2>
     <div class="separator"></div>
-    <!-- content unchanged -->
   </div>
 </section>
 
