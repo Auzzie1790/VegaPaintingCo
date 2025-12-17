@@ -474,4 +474,34 @@ html, body {
       text-align: center !important;
     }
   }
+  /* THANK YOU PAGE */
+.thankyou-hero {
+  min-height: 100vh;
+  background: url('../images/newHero.JPG') no-repeat center center;
+  background-size: cover;
+}
+
+.thankyou-overlay {
+  min-height: 100vh;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-content {
+  max-width: 700px;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.thankyou-content h1 {
+  margin-bottom: 20px;
+}
+
+.thankyou-content p {
+  font-size: 1.125rem;
+  margin-bottom: 30px;
+}
+
   
