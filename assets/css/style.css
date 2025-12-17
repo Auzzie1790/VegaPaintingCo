@@ -324,4 +324,74 @@ html, body {
   
     .navbar-brand>img { max-width: 70%; }
   }
+  /* =========================
+   MOBILE: center everything + hide Services image
+   ========================= */
+@media (max-width: 767px) {
+
+    /* Center all text + inline elements */
+    body,
+    section,
+    .text-center,
+    .head_title,
+    .single_feature,
+    .single_history_content,
+    .single_service_right_text,
+    .single_review,
+    .contact_contant,
+    .contact_info_content,
+    .single_contant_left,
+    .main_footer {
+      text-align: center !important;
+    }
+  
+    /* Center common blocks */
+    .separator,
+    .separator3 {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  
+    /* Buttons centered */
+    .btn {
+      display: inline-block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  
+    /* Center feature icons */
+    .single_feature_icon {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  
+    /* Center and de-offset Bootstrap “offset” columns inside forms/sections */
+    .col-xs-offset-1,
+    .col-sm-offset-1,
+    .col-md-offset-2,
+    .col-lg-offset-2 {
+      margin-left: 0 !important;
+    }
+  
+    /* Make inner form wrapper full width on mobile */
+    #contact .col-lg-8,
+    #contact .col-md-8,
+    #contact .col-sm-10 {
+      width: 100% !important;
+      float: none !important;
+    }
+  
+    /* Remove left/right padding helpers that push content off-center */
+    .p_l_r {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  
+    /* Hide the Services image on mobile */
+    #service .single_history_img,
+    #service .single_service_img,
+    #service img[src*="serviceVega"] {
+      display: none !important;
+    }
+  }
   
