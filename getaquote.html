@@ -1,424 +1,409 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Get a Free Quote | Vega Developments</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="description" content="Get a fast, professional quote for painting or remodeling services in Terre Haute from Vega Developments.">
+  <title>Vega Developments</title>
+  <meta name="description" content="Vega Developments provides high-quality residential and commercial renovation services, including kitchen remodels. Contact us today for customized, detail-driven improvement solutions." />
 
-    <!-- Site Styles -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K6FWMRP5');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i|Open+Sans:300,400,400i,600,600i,700,700i&display=swap" rel="stylesheet" />
 
-    <style>
-        body {
-            background: #f6f6f6;
-            margin: 0 !important;
-            padding-top: 0 !important; /* REMOVE HEADER GAP */
-        }
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/plugins.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
 
-        .landing-hero {
-            padding-top: 20px;
-            padding-bottom: 80px;
-            background: url('assets/images/serviceVega.jpg') center/cover no-repeat;
-            position: relative;
-            margin-top: 0 !important; /* REMOVE ANY GLOBAL MARGIN */
-        }
-
-        .landing-hero:before {
-            content: "";
-            background: rgba(0,0,0,0.65);
-            position: absolute;
-            inset: 0;
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 2;
-            color: white;
-        }
-
-        .hero-title h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        /* Match hero paragraph to bullet text */
-        .hero-title p {
-            font-size: 16px !important;
-            font-weight: 400 !important;
-            line-height: 1.5 !important;
-            color: #fff !important;
-        }
-
-        .landing-card {
-            background: white;
-            padding: 35px;
-            border-radius: 10px;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.25);
-            margin-top: 30px;
-        }
-
-        .landing-card h2 {
-            color: #222 !important;
-        }
-
-        .landing-card .separator {
-            float: none !important;
-            display: block !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-        .benefit-block {
-            padding: 50px 0;
-        }
-
-        .benefit-item {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            margin-bottom: 30px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .benefit-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.18);
-        }
-
-        .single_review {
-            padding: 20px;
-            background: #f8f8f8;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .single_review:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
-        }
-
-        .btn-primary-custom {
-            background: #1d1d1d;
-            color: white;
-            padding: 14px 20px;
-            border-radius: 6px;
-            width: 100%;
-            border: none;
-            font-size: 18px;
-        }
-
-        /* Ensure hero call button is centered */
-        .hero-call-btn {
-            display: block;
-            margin: 25px auto 0;
-            text-align: center;
-        }
-
-        /* Mobile-only sticky call bar */
-        .mobile-call-bar {
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #1d1d1d;
-            padding: 10px 16px;
-            text-align: center;
-            z-index: 9999;
-            display: none;
-        }
-
-        .mobile-call-bar a {
-            color: #fff;
-            font-weight: 800;
-            text-decoration: none;
-            display: inline-block;
-            padding: 10px 18px;
-            border-radius: 999px;
-            border: 2px solid #fff;
-            letter-spacing: 0.5px;
-            animation: pulse 1.5s infinite;
-        }
-
-        .mobile-call-bar i {
-            margin-right: 8px;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.6);}
-            70% { transform: scale(1.04); box-shadow: 0 0 0 10px rgba(255,255,255,0);}
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0);}
-        }
-
-        /* MOBILE FIXES */
-        @media (max-width: 767px) {
-            .landing-hero {
-                padding-top: 0 !important;   /* tighter to top on mobile */
-                margin-top: 0 !important;
-            }
-            .hero-inner {
-                padding-top: 4px !important; /* tiny breathing room */
-            }
-            .hero-inner .row {
-                margin-top: 0 !important;
-            }
-
-            /* Center hero text and list on mobile */
-            .hero-title,
-            .hero-title h1,
-            .hero-title p {
-                text-align: center !important;
-            }
-
-            .hero-inner ul {
-                padding-left: 0 !important;
-                margin-left: 0 !important;
-                text-align: center !important;
-            }
-
-            .hero-inner ul li {
-                text-align: center !important;
-            }
-
-            .mobile-call-bar {
-                display: block;
-            }
-            .reviews, .benefit-block {
-                padding-bottom: 80px;
-            }
-        }
-    </style>
-
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>(function(){ emailjs.init("XjKNfcQIdqw_c0-Sx"); })();</script>
-
-    <!-- Google Ads Tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag("js", new Date());
-        gtag("config", "AW-16840988307");
-    </script>
-
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-16840988307');
+  </script>
 </head>
 
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6FWMRP5"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-<!-- HERO -->
-<section class="landing-hero">
-    <div class="container hero-inner">
-        <div class="row" style="align-items:center; margin-top:0 !important;">
+<body data-spy="scroll" data-target=".navbar-collapse">
+  <div class="culmn">
+    <!-- Header -->
+    <header id="main_menu" class="header navbar-fixed-top menu-scrolls">
+      <div class="main_menu_bg">
+        <div class="container">
+          <div class="row">
+            <div class="nave_menu">
+              <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
 
-            <div class="col-md-6 col-sm-12">
-                <div class="hero-title">
-                    <h1>Vega Developments: Painting & Remodeling Experts</h1>
-                    <p>Full indoor and outdoor painting plus kitchen and bathroom remodeling — get your free quote today.</p>
+                    <a class="navbar-brand" href="#home">
+                      <img src="assets/images/logoV.jpeg" alt="Vega Developments logo" />
+                    </a>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#home">HOME</a></li>
+                      <li><a href="#service">SERVICES</a></li>
+                      <li><a href="#history">ABOUT US</a></li>
+                      <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                  </div>
                 </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-                <ul style="list-style:none; padding-left:0; margin-top:20px;">
-                    <li><i class="fa fa-check"></i> Kitchen & bathroom remodeling</li>
-                    <li><i class="fa fa-check"></i> Interior & exterior painting</li>
-                    <li><i class="fa fa-check"></i> Cabinet painting & refinishing</li>
-                    <li><i class="fa fa-check"></i> Quality decks that last for life</li>
-                    <li><i class="fa fa-check"></i> Fast estimates & fair pricing</li>
-                </ul>
+    <!-- Home -->
+    <section id="home" class="home">
+      <div class="overlay">
+        <div class="home_skew_border">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="main_home_slider text-center">
+                  <div class="single_home_slider">
+                    <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                      <h3>Delivering Quality and Excellence in Every Stroke</h3>
+                      <h1>Vega Developments</h1>
+                      <div class="separator"></div>
+                      <p>
+                        Vega Developments provides exceptional residential and commercial remodeling services throughout the Terre Haute area.
+                        We focus on quality craftsmanship, customer satisfaction, and eco-friendly practices—from home transformations to large-scale commercial projects.
+                      </p>
+                      <div class="home_btn">
+                        <a href="#contact" class="btn btn-lg m_t_10">GET A FREE QUOTE TODAY</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                <a href="tel:+18126483345"
-                   class="btn btn-lg hero-call-btn"
-                   style="background:#fff; color:#000; font-weight:800; border:2px solid #fff; padding:14px 26px; letter-spacing:0.5px;">
-                   CALL NOW: (812) 648-3345
-                </a>
+          <div class="scrooldown">
+            <a href="#feature" aria-label="Scroll down"><i class="fa fa-arrow-down"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="feature" class="feature sections">
+      <div class="container">
+        <div class="row">
+          <div class="main_feature text-center">
+            <div class="col-sm-4">
+              <div class="single_feature">
+                <div class="single_feature_icon"><i class="fa fa-clone"></i></div>
+                <h4>Expert Craftsmanship</h4>
+                <div class="separator3"></div>
+                <p>High-quality finishes with meticulous attention to detail on every project.</p>
+              </div>
             </div>
 
-            <div class="col-md-5 col-md-offset-1 col-sm-12">
-                <div class="landing-card">
-                    <h2>Request a Free Quote</h2>
-                    <div class="separator"></div>
+            <div class="col-sm-4">
+              <div class="single_feature">
+                <div class="single_feature_icon"><i class="fa fa-lightbulb-o"></i></div>
+                <h4>Customized Services</h4>
+                <div class="separator3"></div>
+                <p>Personalized service from design guidance to the final walkthrough.</p>
+              </div>
+            </div>
 
-                    <form id="getaquoteForm">
-                        <input type="text" class="form-control" name="name" placeholder="Full Name" required>
-                        <br>
-                        <input type="email" class="form-control" name="email" placeholder="Email" required>
-                        <br>
-                        <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
-                        <br>
+            <div class="col-sm-4">
+              <div class="single_feature">
+                <div class="single_feature_icon"><i class="fa fa-comments-o"></i></div>
+                <h4>Competitive Pricing</h4>
+                <div class="separator3"></div>
+                <p>Transparent, competitive pricing without compromising quality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                        <select class="form-control" name="service_type" required>
-                            <option value="">Project Type</option>
-                            <option>Kitchen Remodeling</option>
-                            <option>Bathroom Remodeling</option>
-                            <option>Residential Painting</option>
-                            <option>Commercial Painting</option>
-                            <option>Cabinet Painting</option>
-                            <option>Custom Decks</option>
-                        </select>
-                        <br>
+    <!-- Services (History-style, image on right) -->
+    <section id="service" class="history sections">
+      <div class="container">
+        <div class="row">
+          <div class="main_history">
 
-                        <textarea class="form-control" name="message" rows="4" placeholder="Tell us about your project"></textarea>
-                        <br>
+            <div class="col-sm-6">
+              <div class="single_history_content">
+                <div class="head_title">
+                  <h2>OUR SERVICES</h2>
+                </div>
 
-                        <button type="submit" class="btn-primary-custom">Submit Quote Request</button>
+                <article class="single_service_right_text">
+                  <h4>Residential Painting</h4>
+                  <p>Transform your home with expert residential painting services that ensure a flawless finish and vibrant, lasting colors.</p>
+                </article>
+
+                <article class="single_service_right_text">
+                  <h4>Commercial Painting</h4>
+                  <p>Enhance your business space with our professional commercial painting services, designed to impress clients and customers alike.</p>
+                </article>
+
+                <article class="single_service_right_text">
+                  <h4>Kitchen Remodeling</h4>
+                  <p>Vega Developments transforms outdated kitchens into beautiful, functional spaces that reflect your style.</p>
+                </article>
+
+                <article class="single_service_right_text">
+                  <h4>Bathroom Remodeling</h4>
+                  <p>Upgrade your bathroom with expert remodeling services, creating a stylish and functional space.</p>
+                </article>
+
+                <article class="single_service_right_text">
+                  <h4>Custom Decks</h4>
+                  <p>Enhance your outdoor space with a custom-built deck designed for style, durability, and functionality.</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="single_history_img">
+                <img src="assets/images/serviceVega.jpg" alt="Vega Developments services" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / History -->
+    <section id="history" class="history sections">
+      <div class="container">
+        <div class="row">
+          <div class="main_history">
+            <div class="col-sm-6">
+              <div class="single_history_img">
+                <img src="assets/images/wings.png" alt="Vega Developments team at work" />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="single_history_content">
+                <div class="head_title"><h2>OUR HISTORY</h2></div>
+                <p>
+                  Vega Developments started as a small family business serving the Terre Haute area. Today, we bring the same craftsmanship and
+                  care to every residential and commercial project—delivering results that look great and last.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews sections">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="head_title">
+              <h2>What Our Clients Say</h2>
+              <div class="separator"></div>
+              <p>See why our customers love working with Vega Developments</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row review-container">
+          <div class="col-md-4">
+            <div class="single_review">
+              <div class="review_text">
+                <p>"Very pleased with the quality of work, fair price, and so easy to work with. I really appreciate a trustworthy business and will definitely be using Vega Developments again."</p>
+              </div>
+              <div class="review_author"><h4>- Dianne B.</h4></div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="single_review">
+              <div class="review_text">
+                <p>"Very responsive, good follow-up and quality work in a timely manner. Would highly recommend."</p>
+              </div>
+              <div class="review_author"><h4>- Dennis H.</h4></div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="single_review">
+              <div class="review_text">
+                <p>"If you are looking for professional quality services - use Vega Developments - Amazing is all I can say."</p>
+              </div>
+              <div class="review_author"><h4>- Sunni S.</h4></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (Netlify Forms) -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact_contant sections">
+              <div class="head_title text-center">
+                <h2>GET YOUR FREE QUOTE</h2>
+                <div class="separator"></div>
+              </div>
+
+              <div class="row" style="display:flex; flex-wrap:wrap; align-items:stretch;">
+
+                <!-- LEFT: Contact Info -->
+                <div class="col-sm-6" style="display:flex;">
+                  <div class="main_contact_info" style="display:flex; width:100%;">
+                    <div
+                      class="contact_info_content padding-top-90 padding-bottom-60 p_l_r"
+                      style="
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:center;
+                        align-items:center;
+                        text-align:center;
+                        width:100%;
+                      "
+                    >
+                      <div class="single_contact_info">
+                        <div class="single_info_text">
+                          <h3>CALL US</h3>
+                          <h4>
+                            <a href="tel:+18126483345" style="color:#000; text-decoration:none;">
+                              (812) 648-3345
+                            </a>
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div class="single_contact_info" style="margin-top:30px;">
+                        <div class="single_info_text">
+                          <h3>EMAIL US</h3>
+                          <h4>
+                            <a href="mailto:WVEGA@VEGADEVELOPMENTS.CO" style="color:#000; text-decoration:none;">
+                              WVEGA@VEGADEVELOPMENTS.CO
+                            </a>
+                          </h4>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- RIGHT: Form -->
+                <div class="col-sm-6" style="display:flex;">
+                  <div class="single_contant_left padding-top-90 padding-bottom-90" style="width:100%; display:flex;">
+
+                    <form
+                      id="formid"
+                      name="quote"
+                      method="POST"
+                      action="/thank-you/"
+                      data-netlify="true"
+                      netlify-honeypot="bot-field"
+                      style="width:100%; display:flex;"
+                    >
+                      <!-- Required by Netlify -->
+                      <input type="hidden" name="form-name" value="quote" />
+
+                      <!-- Honeypot field (hidden) -->
+                      <p style="display:none;">
+                        <label>Don’t fill this out: <input name="bot-field" /></label>
+                      </p>
+
+                      <div
+                        class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1"
+                        style="display:flex; flex-direction:column; justify-content:center; width:100%;"
+                      >
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
+                        </div>
+
+                        <div class="form-group">
+                          <textarea class="form-control" name="message" rows="6" placeholder="Tell us about your project" required></textarea>
+                        </div>
+
+                        <div>
+                          <input type="submit" value="SEND MESSAGE" class="btn btn-lg">
+                        </div>
+                      </div>
                     </form>
+
+                  </div>
                 </div>
+
+              </div>
             </div>
-
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- SERVICES -->
-<section class="benefit-block">
-    <div class="container text-center">
-        <h2>Our Most Popular Services</h2>
-        <div class="separator"></div>
-
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container">
         <div class="row">
-
-            <div class="col-sm-4">
-                <div class="benefit-item">
-                    <i class="fa fa-cutlery"></i>
-                    <h4>Kitchen Remodeling</h4>
-                    <p>Modern layouts, new cabinetry, and complete transformations.</p>
+          <div class="col-sm-12">
+            <div class="main_footer">
+              <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                  <div class="copyright_text">
+                    <p class="wow fadeInRight" data-wow-duration="1s">
+                      Made with <i class="fa fa-heart"></i> by Digital Heroes 2024. All Rights Reserved
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
-
-            <div class="col-sm-4">
-                <div class="benefit-item">
-                    <i class="fa fa-tint"></i>
-                    <h4>Bathroom Remodeling</h4>
-                    <p>Beautiful upgrades from flooring to tile to fixtures.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="benefit-item">
-                    <i class="fa fa-paint-brush"></i>
-                    <h4>Interior & Exterior Painting</h4>
-                    <p>Clean lines, durable finishes, expert prep work.</p>
-                </div>
-            </div>
-
+          </div>
         </div>
+      </div>
+    </section>
+  </div>
 
-        <div class="row" style="margin-top:30px;">
+  <!-- Scroll to top -->
+  <div class="scrollup">
+    <a href="#" aria-label="Scroll to top"><i class="fa fa-chevron-up"></i></a>
+  </div>
 
-            <div class="col-sm-4">
-                <div class="benefit-item">
-                    <i class="fa fa-archive"></i>
-                    <h4>Cabinet Painting</h4>
-                    <p>High-end refinishing that updates your space instantly.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="benefit-item">
-                    <i class="fa fa-building"></i>
-                    <h4>Commercial Painting</h4>
-                    <p>Professional results that impress customers & clients.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="benefit-item">
-                    <i class="fa fa-tree"></i>
-                    <h4>Custom Decks</h4>
-                    <p>Beautiful, durable deck builds tailored to your home.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews">
-    <div class="container text-center">
-        <h2>What Our Clients Say</h2>
-        <div class="separator"></div>
-
-        <div class="row">
-
-            <div class="col-md-4">
-                <div class="single_review">
-                    <p>"Very pleased with the quality of work, fair price, and so easy to work with."</p>
-                    <h4>- Dianne B.</h4>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="single_review">
-                    <p>"Very responsive, great follow-up and quality work in a timely manner."</p>
-                    <h4>- Dennis H.</h4>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="single_review">
-                    <p>"Amazing quality and very professional. Highly recommended!"</p>
-                    <h4>- Sunni S.</h4>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<section class="footer">
-    <div class="container text-center">
-        <p>Made with <i class="fa fa-heart"></i> by Digital Heroes 2024.</p>
-    </div>
-</section>
-
-<!-- MOBILE-ONLY STICKY CALL BAR -->
-<div class="mobile-call-bar">
-    <a href="tel:+18126483345">
-        <i class="fa fa-phone"></i> CALL NOW: (812) 648-3345
-    </a>
-</div>
-
-<script>
-document.getElementById("getaquoteForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm("service_x18dwti", "template_gqgh4se", this).then(
-        function() {
-            gtag("event", "conversion", {
-                send_to: "AW-16840988307/_j_hCNPh_5caEJOttN4-"
-            });
-            alert("Your message was sent successfully! We'll reach out soon!");
-        },
-        function(error) {
-            alert("Failed to send your message. Please try again.");
-        }
-    );
-});
-</script>
-
+  <!-- JS -->
+  <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.js"></script>
+  <script src="assets/js/jquery.mixitup.min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/jquery.masonry.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

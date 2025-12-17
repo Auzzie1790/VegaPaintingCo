@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-16840988307');
+
+    /* Fire conversion on the real "thank you" page */
+    gtag('event', 'conversion', { send_to: 'AW-16840988307/_j_hCNPh_5caEJOttN4-' });
+  </script>
+</head>
+<body>
+  <div style="max-width:720px;margin:80px auto;padding:0 20px;text-align:center;font-family:Arial,sans-serif;">
+    <h1>Thanks — we got your message.</h1>
+    <p>We’ll reach out soon.</p>
+    <p><a href="/" style="text-decoration:underline;">Back to home</a></p>
+  </div>
+</body>
+</html>
