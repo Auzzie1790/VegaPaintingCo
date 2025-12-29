@@ -1,141 +1,419 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-<meta charset="utf-8">
-<title>Get a Free Quote | Vega Developments</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Get a Free Quote | Vega Developments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get a fast, professional quote for painting or remodeling services in Terre Haute from Vega Developments.">
 
-<meta name="description" content="Get a fast, professional quote for painting or remodeling services in Terre Haute from Vega Developments.">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+    /* ===== Page base (landing-only) ===== */
+    body { background:#f6f6f6; margin:0; padding-top:0; }
 
-<style>
-body{background:#f6f6f6;margin:0;padding-top:0}
-.landing-hero{padding:20px 0 80px;background:url('assets/images/serviceVega.jpg') center/cover no-repeat;position:relative}
-.landing-hero:before{content:"";background:rgba(0,0,0,.65);position:absolute;inset:0}
-.hero-inner{position:relative;z-index:2;color:#fff}
-.hero-title h1{font-size:42px;font-weight:700}
-.hero-title p{font-size:16px}
-.landing-card{background:#fff;padding:35px;border-radius:10px;box-shadow:0 4px 25px rgba(0,0,0,.25);margin-top:30px}
-.landing-card h2{color:#000}
-.btn-primary-custom{background:#1d1d1d;color:#fff;padding:14px 20px;border-radius:6px;width:100%;border:none;font-size:18px}
-.hero-call-btn{display:block;margin:25px auto 0;text-align:center}
-.benefit-block{padding:60px 0}
-.benefit-item{background:#fff;padding:25px;border-radius:8px;box-shadow:0 2px 15px rgba(0,0,0,.1);text-align:center;margin-bottom:30px}
-.single_review{padding:20px;background:#f8f8f8;border-radius:8px;margin-bottom:20px;min-height:200px}
-.mobile-call-bar{position:fixed;left:0;right:0;bottom:0;background:#1d1d1d;padding:10px;text-align:center;z-index:9999;display:none}
-.mobile-call-bar a{color:#fff;font-weight:800;text-decoration:none;border:2px solid #fff;padding:10px 18px;border-radius:999px}
-@media(max-width:767px){
-.hero-title,ul{text-align:center}
-ul{padding-left:0;list-style:none}
-.mobile-call-bar{display:block}
-}
-</style>
+    /* ===== HERO ===== */
+    .landing-hero{
+      padding: 30px 0 70px;
+      background: url('assets/images/serviceVega.jpg') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
-<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag("js",new Date());
-gtag("config","AW-16840988307");
-</script>
+    /* softer, less boring overlay */
+    .landing-hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(90deg,
+        rgba(0,0,0,.78) 0%,
+        rgba(0,0,0,.62) 45%,
+        rgba(0,0,0,.35) 100%
+      );
+    }
+
+    .hero-inner{ position:relative; z-index:2; color:#fff; }
+    .hero-title{ padding-right: 10px; }
+
+    /* Better hierarchy (less “busy”, more premium) */
+    .hero-title h1{
+      font-size: 44px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: .06em; /* overrides your global h1 tracking for this page */
+      margin: 0 0 14px;
+      color:#fff;
+    }
+
+    .hero-title p{
+      font-size: 18px;
+      line-height: 1.45;
+      margin: 0 0 10px;
+      max-width: 520px;
+      color:#fff;
+    }
+
+    .hero-sub{
+      font-size: 15px;
+      opacity: .9;
+      margin-top: 10px;
+      max-width: 520px;
+      color:#fff;
+    }
+
+    .landing-hero ul{
+      padding-left: 0;
+      margin: 18px 0 0;
+      list-style: none;
+    }
+
+    .landing-hero ul li{
+      margin-bottom: 8px;
+      font-size: 15px;
+      opacity: .95;
+    }
+
+    .landing-hero ul li i{
+      margin-right: 8px;
+      opacity: .95;
+    }
+
+    .hero-call-btn{
+      display:inline-block;
+      margin: 20px 0 0;
+      background:#fff;
+      color:#000;
+      font-weight: 900;
+      border: 2px solid #fff;
+      border-radius: 999px;
+      padding: 12px 18px;
+      text-decoration:none;
+    }
+
+    /* Hide bullets on desktop so it’s cleaner */
+    @media (min-width: 768px){
+      .landing-hero ul{ display:none; }
+    }
+
+    /* ===== FORM CARD ===== */
+    .landing-card{
+      background:#fff;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #e8eaee;
+      box-shadow: 0 18px 45px rgba(0,0,0,.18);
+      margin-top: 18px;
+    }
+
+    .badge-line{
+      display:inline-block;
+      font-weight:800;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#111;
+      background:#f0f2f5;
+      padding:8px 12px;
+      border-radius:999px;
+      margin-bottom: 12px;
+    }
+
+    .landing-card h2{
+      color:#111;
+      margin: 0 0 14px;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    /* Clean inputs (no mashed spacing) */
+    .landing-card .form-control{
+      display:block;
+      width:100%;
+      height: 46px;
+      padding: 10px 10px;
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      background:#fff;
+      color:#111;
+      box-shadow:none;
+    }
+
+    .landing-card .form-control:focus{
+      border-color:#bcefeb;
+      box-shadow: 0 0 0 3px rgba(188,239,235,.35);
+      outline:none;
+    }
+
+    .landing-card select.form-control{ height: 46px; }
+
+    .btn-primary-custom{
+      background:#1d1d1d;
+      color:#fff;
+      width:100%;
+      height: 48px;
+      border:none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: .02em;
+      cursor:pointer;
+      margin-top: 6px;
+    }
+
+    /* ===== REVIEWS ===== */
+    .reviews-block{
+      background:#f6f7f9;
+      padding: 70px 0;
+    }
+
+    .reviews-block h2{
+      font-weight: 800;
+      color:#111;
+      margin-bottom: 6px;
+      text-transform: none; /* override your uppercase if you want */
+    }
+
+    .reviews-sub{
+      max-width: 640px;
+      margin: 0 auto 30px;
+      font-size: 16px;
+      line-height: 1.6;
+      color:#666;
+    }
+
+    .review-card{
+      background:#fff;
+      padding:24px;
+      border-radius:16px;
+      border:1px solid #e8eaee;
+      box-shadow:0 10px 28px rgba(0,0,0,.06);
+      text-align:left;
+      min-height: 210px;
+      margin-bottom: 18px;
+    }
+
+    .review-stars{
+      font-size:16px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color:#111;
+      font-weight: 900;
+    }
+
+    .review-card p{
+      font-size: 15px;
+      line-height: 1.65;
+      color:#444;
+      margin: 0;
+    }
+
+    .review-name{
+      margin-top: 14px;
+      font-weight: 800;
+      color:#333;
+      font-size: 14px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer{ background:#000; padding: 18px 0; }
+    .footer p{ color:#fff; margin:0; font-size: 13px; line-height: 1.4; }
+
+    /* ===== STICKY CALL BAR (mobile) ===== */
+    .mobile-call-bar{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      background:#1d1d1d;
+      padding:10px;
+      text-align:center;
+      z-index:9999;
+      display:none;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .mobile-call-bar a{
+      color:#fff;
+      font-weight:900;
+      text-decoration:none;
+      border:2px solid #fff;
+      padding:10px 18px;
+      border-radius:999px;
+      display:inline-block;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 767px){
+      body{ padding-bottom: 90px; }
+
+      .landing-hero{ padding: 28px 0 50px; }
+      .hero-title, .hero-title p, .hero-title h1{ text-align:center; }
+      .hero-title h1{ font-size: 32px; letter-spacing: .04em; }
+      .hero-title p{ font-size: 16px; margin-left:auto; margin-right:auto; }
+      .hero-sub{ margin-left:auto; margin-right:auto; }
+
+      /* show bullets on mobile (helpful) */
+      .landing-hero ul{ display:block; text-align:center; }
+      .landing-hero ul li{ font-size: 15px; }
+
+      .hero-call-btn{
+        display:block;
+        max-width: 320px;
+        margin: 18px auto 0;
+        text-align:center;
+      }
+
+      .landing-card{ margin-top: 22px; padding: 22px; }
+      .landing-card h2{ text-align:center; }
+
+      /* prevent iOS zoom on focus */
+      .landing-card .form-control{ font-size: 16px; }
+
+      .reviews-block{ padding: 50px 0; }
+      .review-card{ text-align:left; }
+
+      .mobile-call-bar{ display:block; }
+    }
+  </style>
+
+  <!-- Google Ads tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "AW-16840988307");
+  </script>
 </head>
 
 <body>
 
-<!-- HERO + FORM -->
-<section class="landing-hero">
-<div class="container hero-inner">
-<div class="row" style="align-items:center">
+  <!-- HERO + FORM -->
+  <section class="landing-hero">
+    <div class="container hero-inner">
+      <div class="row" style="align-items:center">
 
-<div class="col-md-6">
-<h1>Painting & Remodeling Experts</h1>
-<p>Interior & exterior painting plus kitchen and bathroom remodeling.</p>
+        <div class="col-md-6 hero-title">
+          <h1>Remodeling & Painting Experts</h1>
 
-<ul>
-<li><i class="fa fa-check"></i> Kitchen & bathroom remodeling</li>
-<li><i class="fa fa-check"></i> Interior & exterior painting</li>
-<li><i class="fa fa-check"></i> Cabinet painting</li>
-<li><i class="fa fa-check"></i> Custom decks</li>
-<li><i class="fa fa-check"></i> Fast estimates</li>
-</ul>
+          <p>
+            Kitchen Remodeling & Cabinet Painting<br>
+            Serving Terre Haute & the Wabash Valley
+          </p>
 
-<a href="tel:+18126483345" class="btn btn-lg hero-call-btn"
-style="background:#fff;color:#000;font-weight:800;border:2px solid #fff">
-CALL NOW: (812) 648-3345
-</a>
-</div>
+          <p class="hero-sub">
+            Free estimates • Local & insured • Fast turnaround
+          </p>
 
-<div class="col-md-5 col-md-offset-1">
-<div class="landing-card">
-<h2>Request a Free Quote!</h2>
+          <!-- Mobile-only benefit bullets (hidden on desktop via CSS) -->
+          <ul>
+            <li><i class="fa fa-check"></i> Kitchen & bathroom remodeling</li>
+            <li><i class="fa fa-check"></i> Interior & exterior painting</li>
+            <li><i class="fa fa-check"></i> Cabinet painting</li>
+            <li><i class="fa fa-check"></i> Custom decks</li>
+            <li><i class="fa fa-check"></i> Fast estimates</li>
+          </ul>
 
+          <a href="tel:+18126483345" class="hero-call-btn">
+            CALL NOW: (812) 648-3345
+          </a>
+        </div>
 
-<form
-name="Google"
-method="POST"
-action="/thankyou.html"
-data-netlify="true"
-netlify-honeypot="bot-field">
+        <div class="col-md-5 col-md-offset-1">
+          <div class="landing-card">
+            <div class="badge-line">Free Estimate • Fast Response</div>
+            <h2>Request a Free Quote!</h2>
 
-<input type="hidden" name="form-name" value="Google">
+            <form
+              name="Google"
+              method="POST"
+              action="/thankyou.html"
+              data-netlify="true"
+              netlify-honeypot="bot-field">
 
-<p style="display:none">
-<label>Don’t fill this out <input name="bot-field"></label>
-</p>
+              <input type="hidden" name="form-name" value="Google">
 
-<input class="form-control" name="name" placeholder="Full Name" required><br>
-<input class="form-control" type="email" name="email" placeholder="Email" required><br>
-<input class="form-control" name="phone" placeholder="Phone Number" required><br>
+              <p style="display:none">
+                <label>Don’t fill this out <input name="bot-field"></label>
+              </p>
 
-<select class="form-control" name="service_type" required>
-<option value="">Project Type</option>
-<option>Kitchen Remodeling</option>
-<option>Bathroom Remodeling</option>
-<option>Residential Painting</option>
-<option>Commercial Painting</option>
-<option>Cabinet Painting</option>
-<option>Custom Decks</option>
-</select><br>
+              <input class="form-control" name="name" placeholder="Full Name" required>
+              <input class="form-control" name="phone" placeholder="Phone Number" required>
+              <input class="form-control" name="email" placeholder="Email (optional)">
 
-<textarea class="form-control" name="message" rows="4" placeholder="Tell us about your project" required></textarea><br>
+              <select class="form-control" name="service_type" required>
+                <option value="">Project Type</option>
+                <option>Kitchen Remodeling</option>
+                <option>Bathroom Remodeling</option>
+                <option>Residential Painting</option>
+                <option>Commercial Painting</option>
+                <option>Cabinet Painting</option>
+                <option>Custom Decks</option>
+              </select>
 
-<button type="submit" class="btn-primary-custom">Submit Quote Request</button>
-</form>
+              <button type="submit" class="btn-primary-custom">
+                Submit Quote Request
+              </button>
 
-</div>
-</div>
-</div>
-</div>
-</section>
+            </form>
+          </div>
+        </div>
 
-<!-- SERVICES -->
-<section class="benefit-block">
-<div class="container text-center">
-<h2>Our Most Popular Services</h2>
-<div class="separator"></div>
+      </div>
+    </div>
+  </section>
 
-<div class="row">
-<div class="col-sm-4"><div class="benefit-item"><h4>Kitchen Remodeling</h4></div></div>
-<div class="col-sm-4"><div class="benefit-item"><h4>Bathroom Remodeling</h4></div></div>
-<div class="col-sm-4"><div class="benefit-item"><h4>Interior & Exterior Painting</h4></div></div>
-</div>
-</div>
-</section>
+  <!-- REVIEWS (replaces Popular Services) -->
+  <section class="reviews-block">
+    <div class="container text-center">
+      <h2>Recent Reviews</h2>
+      <div class="separator"></div>
+      <p class="reviews-sub">Real feedback from local homeowners.</p>
 
-<!-- FOOTER -->
-<section class="footer">
-<div class="container text-center">
-<p>Made with <i class="fa fa-heart"></i> by Digital Heroes 2024</p>
-</div>
-</section>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>“They did a great job! Called right away and was able to get the job done within three days! We are very happy! Our room looks fantastic!”</p>
+            <div class="review-name">— Howard C.</div>
+          </div>
+        </div>
 
-<div class="mobile-call-bar">
-<a href="tel:+18126483345"><i class="fa fa-phone"></i> CALL NOW</a>
-</div>
+        <div class="col-sm-4">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>“Wyatt is ver professional and communicates well throughout the entire process. Highly recomended.”</p>
+            <div class="review-name">— Brenda S.</div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>“THEY WERE WONDERFUL! Did a great job and got rid of all the old materials!”</p>
+            <div class="review-name">— Mildred A.</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="tel:+18126483345" class="btn btn-lg" style="margin-top:10px;">
+        Call for a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <div class="container text-center">
+      <p>Made with <i class="fa fa-heart"></i> by Digital Heroes 2024</p>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Call Bar -->
+  <div class="mobile-call-bar">
+    <a href="tel:+18126483345"><i class="fa fa-phone"></i> Call for Free Estimate</a>
+  </div>
 
 </body>
 </html>

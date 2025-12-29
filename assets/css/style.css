@@ -615,5 +615,26 @@ html, body {
       display: block;
     }
   }
+
+  .form-control {
+    margin-bottom: 14px;
+  }
   
+  .btn-primary-custom {
+    margin-top: 10px;
+  }
   
+  .landing-hero h1 {
+    font-size: 4.00rem; /* slightly smaller than default */
+    line-height: 1.2;
+  }
+  
+  .landing-hero p {
+    font-size: 2.00rem; /* bigger, more confident */
+    line-height: 1.4;
+  }
+  
+  .hero-sub {
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
