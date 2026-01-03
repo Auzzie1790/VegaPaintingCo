@@ -10,415 +10,303 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/images/vega-black-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/images/vega-black-512.png">
 
-
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 
   <style>
-    /* ===== Page base (landing-only) ===== */
-    body { background:#f6f6f6; margin:0; padding-top:0; }
+    body{
+      background:#f6f6f6;
+      margin:0;
+    }
+
+    /* ===== FADE IN (LEFT CONTENT ONLY) ===== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: .15s; }
 
     /* ===== HERO ===== */
     .landing-hero{
-      padding: 30px 0 70px;
-      background: url('assets/images/serviceVega.jpg') center/cover no-repeat;
-      position: relative;
-      overflow: hidden;
+      padding:30px 0 70px;
+      background:url('assets/images/HeroBKG.png') center/cover no-repeat;
+      position:relative;
+      overflow:hidden;
     }
 
-    /* softer, less boring overlay */
     .landing-hero:before{
       content:"";
       position:absolute;
       inset:0;
-      background: linear-gradient(90deg,
-        rgba(0,0,0,.78) 0%,
-        rgba(0,0,0,.62) 45%,
-        rgba(0,0,0,.35) 100%
+      background:linear-gradient(90deg,
+        rgba(0,0,0,.78),
+        rgba(0,0,0,.62),
+        rgba(0,0,0,.35)
       );
     }
 
-    .hero-inner{ position:relative; z-index:2; color:#fff; }
-    .hero-title{ padding-right: 10px; }
-
-    /* Better hierarchy (less “busy”, more premium) */
-    .hero-title h1{
-      font-size: 44px;
-      line-height: 1.1;
-      font-weight: 800;
-      letter-spacing: .06em; /* overrides your global h1 tracking for this page */
-      margin: 0 0 14px;
+    .hero-inner{
+      position:relative;
+      z-index:2;
       color:#fff;
+    }
+
+    .hero-row{
+      display:flex;
+      align-items:stretch;
+    }
+
+    .hero-title,
+    .hero-form{
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* Center hero text */
+    .hero-title{
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero-logo{
+      max-width:350px;
+      width:100%;
+      margin-bottom:18px;
+    }
+
+    .hero-title h1{
+      font-size:44px;
+      font-weight:800;
+      letter-spacing:.06em;
+      margin-bottom:14px;
     }
 
     .hero-title p{
-      font-size: 18px;
-      line-height: 1.45;
-      margin: 0 0 10px;
-      max-width: 520px;
-      color:#fff;
+      font-size:18px;
+      margin-bottom:10px;
+      max-width:520px;
     }
 
     .hero-sub{
-      font-size: 15px;
-      opacity: .9;
-      margin-top: 10px;
-      max-width: 520px;
-      color:#fff;
-    }
-
-    .landing-hero ul{
-      padding-left: 0;
-      margin: 18px 0 0;
-      list-style: none;
-    }
-
-    .landing-hero ul li{
-      margin-bottom: 8px;
-      font-size: 15px;
-      opacity: .95;
-    }
-
-    .landing-hero ul li i{
-      margin-right: 8px;
-      opacity: .95;
+      font-size:15px;
+      opacity:.9;
     }
 
     .hero-call-btn{
-      display:inline-block;
-      margin: 20px 0 0;
+      margin-top:22px;
       background:#fff;
       color:#000;
-      font-weight: 900;
-      border: 2px solid #fff;
-      border-radius: 999px;
-      padding: 12px 18px;
+      font-weight:900;
+      border-radius:999px;
+      padding:12px 20px;
       text-decoration:none;
+      display:inline-block;
     }
 
-    /* Hide bullets on desktop so it’s cleaner */
-    @media (min-width: 768px){
-      .landing-hero ul{ display:none; }
-    }
-
-    /* ===== FORM CARD ===== */
+    /* ===== FORM ===== */
     .landing-card{
       background:#fff;
-      padding: 28px;
-      border-radius: 18px;
-      border: 1px solid #e8eaee;
-      box-shadow: 0 18px 45px rgba(0,0,0,.18);
-      margin-top: 18px;
+      padding:32px;
+      border-radius:18px;
+      border:1px solid #e8eaee;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
+      height:100%;
+      display:flex;
+      flex-direction:column;
     }
 
     .badge-line{
-      display:inline-block;
-      font-weight:800;
+      background:#000;
+      color:#fff;
       font-size:12px;
+      font-weight:800;
       letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#111;
-      background:#f0f2f5;
-      padding:8px 12px;
+      padding:8px 14px;
       border-radius:999px;
-      margin-bottom: 12px;
+      align-self:center;
+      margin-bottom:18px;
     }
 
+    /* FORCE BLACK HEADING */
     .landing-card h2{
-      color:#111;
-      margin: 0 0 14px;
-      font-size: 26px;
-      font-weight: 800;
+      text-align:center;
+      font-weight:800;
+      margin-bottom:22px;
+      color:#000; /* 👈 FIX */
     }
 
-    /* Clean inputs (no mashed spacing) */
-    .landing-card .form-control{
-      display:block;
-      width:100%;
-      height: 46px;
-      padding: 10px 10px;
-      border: 1px solid #e6e6e6;
-      border-radius: 12px;
-      margin-bottom: 12px;
-      background:#fff;
-      color:#111;
-      box-shadow:none;
+    .landing-card form{
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      justify-content:space-between;
     }
 
-    .landing-card .form-control:focus{
-      border-color:#bcefeb;
-      box-shadow: 0 0 0 3px rgba(188,239,235,.35);
-      outline:none;
+    .form-fields{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
     }
 
-    .landing-card select.form-control{ height: 46px; }
+    .form-control{
+      height:46px;
+      border-radius:12px;
+      padding:10px 12px;
+      border:1px solid #e6e6e6;
+    }
 
     .btn-primary-custom{
+      margin-top:28px;
+      height:48px;
       background:#1d1d1d;
       color:#fff;
-      width:100%;
-      height: 48px;
+      font-weight:900;
+      border-radius:12px;
       border:none;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: 900;
-      letter-spacing: .02em;
-      cursor:pointer;
-      margin-top: 6px;
     }
 
     /* ===== REVIEWS ===== */
     .reviews-block{
       background:#f6f7f9;
-      padding: 70px 0;
-    }
-
-    .reviews-block h2{
-      font-weight: 800;
-      color:#111;
-      margin-bottom: 6px;
-      text-transform: none; /* override your uppercase if you want */
-    }
-
-    .reviews-sub{
-      max-width: 640px;
-      margin: 0 auto 30px;
-      font-size: 16px;
-      line-height: 1.6;
-      color:#666;
+      padding:70px 0;
     }
 
     .review-card{
       background:#fff;
       padding:24px;
       border-radius:16px;
-      border:1px solid #e8eaee;
       box-shadow:0 10px 28px rgba(0,0,0,.06);
-      text-align:left;
-      min-height: 210px;
-      margin-bottom: 18px;
+      margin-bottom:18px;
     }
+
+    /* FORCE ALL REVIEW CARDS TO SAME HEIGHT */
+.reviews-block .row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.review-card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
     .review-stars{
-      font-size:16px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      color:#111;
-      font-weight: 900;
-    }
-
-    .review-card p{
-      font-size: 15px;
-      line-height: 1.65;
-      color:#444;
-      margin: 0;
+      font-weight:900;
+      margin-bottom:10px;
     }
 
     .review-name{
-      margin-top: 14px;
-      font-weight: 800;
-      color:#333;
-      font-size: 14px;
+      margin-top:14px;
+      font-weight:800;
     }
 
-    /* ===== FOOTER ===== */
-    .footer{ background:#000; padding: 18px 0; }
-    .footer p{ color:#fff; margin:0; font-size: 13px; line-height: 1.4; }
-
-    /* ===== STICKY CALL BAR (mobile) ===== */
-    .mobile-call-bar{
-      position:fixed;
-      left:0; right:0; bottom:0;
-      background:#1d1d1d;
-      padding:10px;
-      text-align:center;
-      z-index:9999;
-      display:none;
-      border-top: 1px solid rgba(255,255,255,.12);
-    }
-    .mobile-call-bar a{
+    .footer{
+      background:#000;
       color:#fff;
-      font-weight:900;
-      text-decoration:none;
-      border:2px solid #fff;
-      padding:10px 18px;
-      border-radius:999px;
-      display:inline-block;
+      padding:18px 0;
+      text-align:center;
     }
 
-    /* ===== MOBILE ===== */
     @media (max-width: 767px){
-      body{ padding-bottom: 90px; }
-
-      .landing-hero{ padding: 28px 0 50px; }
-      .hero-title, .hero-title p, .hero-title h1{ text-align:center; }
-      .hero-title h1{ font-size: 32px; letter-spacing: .04em; }
-      .hero-title p{ font-size: 16px; margin-left:auto; margin-right:auto; }
-      .hero-sub{ margin-left:auto; margin-right:auto; }
-
-      /* show bullets on mobile (helpful) */
-      .landing-hero ul{ display:block; text-align:center; }
-      .landing-hero ul li{ font-size: 15px; }
-
-      .hero-call-btn{
-        display:block;
-        max-width: 320px;
-        margin: 18px auto 0;
-        text-align:center;
-      }
-
-      .landing-card{ margin-top: 22px; padding: 22px; }
-      .landing-card h2{ text-align:center; }
-
-      /* prevent iOS zoom on focus */
-      .landing-card .form-control{ font-size: 16px; }
-
-      .reviews-block{ padding: 50px 0; }
-      .review-card{ text-align:left; }
-
-      .mobile-call-bar{ display:block; }
+      .hero-row{ display:block; }
+      .landing-card{ height:auto; margin-top:28px; }
+      .hero-logo{ max-width:180px; }
     }
   </style>
-
-  <!-- Google Ads tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16840988307"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "AW-16840988307");
-  </script>
 </head>
 
 <body>
 
-  <!-- HERO + FORM -->
-  <section class="landing-hero">
-    <div class="container hero-inner">
-      <div class="row" style="align-items:center">
+<section class="landing-hero">
+  <div class="container hero-inner">
+    <div class="row hero-row">
 
-        <div class="col-md-6 hero-title">
-          <h1>Remodeling & Painting Experts</h1>
+      <!-- LEFT: fades in -->
+      <div class="col-md-6 hero-title fade-in delay-1">
+        <img src="assets/images/LandingPageLogo.png" class="hero-logo" alt="Vega Developments">
+        <h1>Remodeling & Painting Experts</h1>
+        <p>Kitchen Remodeling & Cabinet Painting<br>Serving Terre Haute & the Wabash Valley</p>
+        <p class="hero-sub">Free estimates • Local & insured • Fast turnaround</p>
+        <a href="tel:+18126483345" class="hero-call-btn">CALL NOW: (812) 648-3345</a>
+      </div>
 
-          <p>
-            Kitchen Remodeling & Cabinet Painting<br>
-            Serving Terre Haute & the Wabash Valley
-          </p>
+      <!-- RIGHT: NO FADE -->
+      <div class="col-md-5 col-md-offset-1 hero-form">
+        <div class="landing-card">
+          <div class="badge-line">FREE ESTIMATE • FAST RESPONSE</div>
+          <h2>Request a Free Quote!</h2>
 
-          <p class="hero-sub">
-            Free estimates • Local & insured • Fast turnaround
-          </p>
+          <form name="Google" method="POST" action="/thankyou.html" data-netlify="true">
+            <input type="hidden" name="form-name" value="Google">
 
-          <!-- Mobile-only benefit bullets (hidden on desktop via CSS)
-          <ul>
-            <li><i class="fa fa-check"></i> Kitchen & bathroom remodeling</li>
-            <li><i class="fa fa-check"></i> Interior & exterior painting</li>
-            <li><i class="fa fa-check"></i> Cabinet painting</li>
-            <li><i class="fa fa-check"></i> Custom decks</li>
-            <li><i class="fa fa-check"></i> Fast estimates</li>
-          </ul> -->
-
-          <a href="tel:+18126483345" class="hero-call-btn">
-            CALL NOW: (812) 648-3345
-          </a>
-        </div>
-
-        <div class="col-md-5 col-md-offset-1">
-          <div class="landing-card">
-            <div class="badge-line">Free Estimate • Fast Response</div>
-            <h2>Request a Free Quote!</h2>
-
-            <form
-              name="Google"
-              method="POST"
-              action="/thankyou.html"
-              data-netlify="true"
-              netlify-honeypot="bot-field">
-
-              <input type="hidden" name="form-name" value="Google">
-
-              <p style="display:none">
-                <label>Don’t fill this out <input name="bot-field"></label>
-              </p>
-
+            <div class="form-fields">
               <input class="form-control" name="name" placeholder="Full Name" required>
               <input class="form-control" name="phone" placeholder="Phone Number" required>
               <input class="form-control" name="email" placeholder="Email (optional)">
+            </div>
 
-              <select class="form-control" name="service_type" required>
-                <option value="">Project Type</option>
-                <option>Kitchen Remodeling</option>
-                <option>Bathroom Remodeling</option>
-                <option>Residential Painting</option>
-                <option>Commercial Painting</option>
-                <option>Cabinet Painting</option>
-                <option>Custom Decks</option>
-              </select>
-
-              <button type="submit" class="btn-primary-custom">
-                Submit Quote Request
-              </button>
-
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS (replaces Popular Services) -->
-  <section class="reviews-block">
-    <div class="container text-center">
-      <h2>Recent Reviews</h2>
-      <div class="separator"></div>
-      <p class="reviews-sub">Real feedback from local homeowners.</p>
-
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>“They did a great job! Called right away and was able to get the job done within three days! We are very happy! Our room looks fantastic!”</p>
-            <div class="review-name">— Howard C.</div>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>“Wyatt is very professional and communicates well throughout the entire process. Highly recomended.”</p>
-            <div class="review-name">— Brenda S.</div>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>“THEY WERE WONDERFUL! Did a great job and got rid of all the old materials!”</p>
-            <div class="review-name">— Mildred A.</div>
-          </div>
+            <button type="submit" class="btn-primary-custom">
+              Submit Quote Request
+            </button>
+          </form>
         </div>
       </div>
 
-      <a href="tel:+18126483345" class="btn btn-lg" style="margin-top:10px;">
-        Call for a Free Estimate
-      </a>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <section class="footer">
-    <div class="container text-center">
-      <p>Made with <i class="fa fa-heart"></i> by Digital Heroes 2024</p>
-    </div>
-  </section>
-
-  <!-- Mobile Sticky Call Bar -->
-  <div class="mobile-call-bar">
-    <a href="tel:+18126483345"><i class="fa fa-phone"></i> Call for Free Estimate</a>
   </div>
+</section>
+
+<section class="reviews-block">
+  <div class="container text-center">
+    <h2>Recent Reviews</h2>
+    <p>Real feedback from local homeowners.</p>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“They did a great job! Called right away and was able to get the job done within three days! We are very happy! Our room looks fantastic!”</p>
+          <div class="review-name">— Howard C.</div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>““Wyatt is very professional and communicates well throughout the entire process. Highly recomended.””</p>
+          <div class="review-name">— Brenda S.</div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“THEY WERE WONDERFUL! Did a great job and got rid of all the old materials!”</p>
+          <div class="review-name">— Mildred A.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+  <p>Made with <i class="fa fa-heart"></i> by Digital Heroes 2024</p>
+</section>
 
 </body>
 </html>
